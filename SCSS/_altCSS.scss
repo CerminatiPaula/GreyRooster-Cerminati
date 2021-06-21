@@ -1,0 +1,22 @@
+/* altCSS */
+#contenidoAlt{
+	display: grid;
+	grid-template-columns: 200px 80vw;
+	grid-template-rows: 30vh 60vh 55vh;
+	grid-template-areas: 
+	"logo datos"
+	"menu datos"
+	"sitemap sitemap"
+}
+.logoAlt{
+	grid-area: logo;
+	max-width: 200px;
+	max-height: 200px;
+	transform: translateY(-2px);
+}
+.menuAlt{
+	grid-area: menu;
+	width: 200px;
+	background-color: white;
+}
+

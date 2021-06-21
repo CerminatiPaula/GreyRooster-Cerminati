@@ -1,0 +1,35 @@
+/* Cervezas */
+.datosCervezas{
+	grid-area: datos;
+	display: grid;
+	grid-template-columns:80vw;
+	grid-template-rows:70vh;
+	grid-template-areas: 
+	"productos"
+}
+.productos{
+	grid-area: productos;
+	padding: 3%;
+}
+.dropdown{
+	@include estiloFlex(flex,row,start,start)
+}
+.dropdown{
+	 .titulo{
+		font-size: 200%;
+		font-weight: bold;
+		color:$violeta
+	}
+}
+.varietales{
+	margin-left: 7vw;
+}
+.rubias__lista{
+	 li{
+		font-size: 70%;
+		}
+}
+.varietales__lista{
+	li{
+	font-size: 70%;}
+}

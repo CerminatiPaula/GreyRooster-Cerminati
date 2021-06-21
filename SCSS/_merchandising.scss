@@ -1,0 +1,20 @@
+/* Merchandising */
+@each $color, $value in $table-variants {
+  .tableBackgroundColor--#{$color}{
+  	background-color: $value;
+  }
+}
+.tablaMerch{
+	padding:10px;
+}
+.tableBorder--thicker{
+	border-width:2px;
+	border-color: $gray-900;
+	border-style: solid;
+}
+.tableColor--white{
+	color:white;
+}
+.table--justify{
+	@include estiloFlex(flex,row,space-between,center)
+}

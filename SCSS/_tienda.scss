@@ -1,0 +1,78 @@
+/* Tienda */
+.datosTienda{
+	grid-area: datos;
+	display: grid;
+	grid-template-columns:60vw;
+	grid-template-rows: 20vh 50vh;
+	grid-template-areas: 
+	"header"
+	"carrusel"
+}
+.headerTienda{
+	grid-area: header;
+	background-color: white;
+	@include estiloFlex(flex,row,space-around,center)
+}
+.carruselTienda{
+	grid-area: carrusel;
+	padding: 30px;
+}
+/* estilo de la tienda */
+.cart{
+	display: flex;
+	justify-content: center;
+	.fa{
+		color:black;
+	}	
+}
+.cart .fa:hover{
+	color:$violeta;
+	transition: $duracion ease-out;
+} 
+.catheader{
+	color:#202020;
+}
+.catheader:hover{
+	color:$violeta;
+	transition: $duracion ease-out;
+}
+.agregar{
+	@include estiloFlex(flex,row,space-around,center)
+}
+.agregar:hover{
+	color:$violeta;
+	transition: $duracion ease-out;
+}
+
+@each $color, $value in $colorCerveza {
+  .carrusel__titulo--#{$color}{
+  	color: $value;
+  }
+}
+.carrusel__subtitulo{
+	color:$beige;
+}
+.carousel-inner{
+	img{
+		height:50vh;
+	}
+}
+@media only screen and (min-width: 576px) and (max-width: 768px){
+	.catheader{
+		font-size: 125%;
+	}
+}
+@media only screen and (max-width: 576px){
+	.datosTienda{
+		grid-area: datos;
+		display: grid;
+		grid-template-columns:60vw;
+		grid-template-rows: 70vh 20vh;
+		grid-template-areas: 
+		"carrusel"
+		"header"
+	}
+	.catheader{
+		font-size: 100%;
+	}
+} 

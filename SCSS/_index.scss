@@ -1,0 +1,108 @@
+/* Index */
+#contenidoIndex{
+	display: grid;
+	grid-template-columns: 200px 80vw;
+	grid-template-rows: 200px 40vh 25vh 55vh;
+	grid-template-areas: 
+	"logo imagenes"
+	"menu imagenes"
+	"menu tabla"
+	"sitemap sitemap"
+}
+.tablaIndex{
+	grid-area: tabla;
+}
+.logoIndex{
+	grid-area: logo;
+}
+.principalIndex{
+	grid-area: menu;
+	width: 200px;
+	min-height: 30vh;
+	background-color: white;
+}
+#imagenesIndex{
+	grid-area: imagenes;
+	display: grid;
+	grid-template-rows: 200px 40vh ;
+	grid-template-columns: 40vw 40vw;
+	grid-template-areas: 
+	"columna1 columna2 "
+	"columna1 columna2"
+}
+.columna1{
+	grid-area: columna1;
+	@include estiloImagenes(grid,no-repeat,cover,center,end,center);
+	background-image: url(../imagenes/imagen1.jpg);
+}
+.columna2{
+	grid-area: columna2;
+	display: grid;
+	grid-template-columns: 40vw;
+	grid-template-rows: 200px 20vh 20vh;
+	
+	grid-template-areas: 
+	"imagen2"
+	"img4"
+	"img6" 
+}
+.imagen2{
+	grid-area: imagen2;
+	background-image: url(../imagenes/imagen2.jpg);
+	@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+}
+.img4{
+	grid-area: img4;
+	background-image: url(../imagenes/img4.jpg);
+	@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+}
+.img6{
+	grid-area: img6;
+	background-image: url(../imagenes/img6.jpg);
+	@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+}
+.imagenesIndex__links{
+	color: white;
+}
+@media only screen and (min-width: 576px) and (max-width: 992px){
+	#contenidoIndex{
+		display: grid;
+		padding-left: 12px;
+		grid-template-columns: 200px 60vw;
+		grid-template-rows: 200px 40vh 25vh ;
+		grid-template-areas: 
+		"logo imagenes"
+		"menu imagenes"
+		"tabla tabla"
+	}
+	.principalIndex{
+		width: 200px;
+	}	
+}
+@media only screen and (max-width: 576px){
+	#contenidoIndex{
+		display: grid;
+		padding-left: 12px;
+		grid-template-columns: 200px 80vw;
+		grid-template-rows: 200px 40vh 25vh ;
+		grid-template-areas: 
+		"logo imagenes"
+		"menu imagenes"
+		"tabla tabla"
+	}
+	#imagenesIndex{
+		grid-area: imagenes;
+		display: grid;
+		grid-template-rows: 200px 10vh 30vh ;
+		grid-template-columns: 40vw 40vw;
+		grid-template-areas: 
+		"columna1 columna1 "
+		"columna1 columna1"
+		"columna2 columna2"
+	}
+	.columna2{
+		grid-area: columna2;
+		display: flex;
+		flex-direction: row;
+	}
+}

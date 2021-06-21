@@ -1,0 +1,16 @@
+/* Contacto */
+.datosContacto{
+	grid-area: datos;
+	padding: 30px;
+	display: grid;
+	grid-template-columns: 80vw ;
+	grid-template-rows: 90vh;
+	grid-template-areas: 
+	"formulario"
+}
+.btn{
+	background-color:$azul!important;
+}
+.btn:hover{
+	background-color:$azulClaro!important;
+}
