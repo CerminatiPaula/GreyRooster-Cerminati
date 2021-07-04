@@ -1,0 +1,28 @@
+/* Merchandising */
+@each $color, $value in $table-variants {
+  .tableBackgroundColor--#{$color}{
+  	background-color: $value;
+  }
+}
+.tablaMerch{
+	padding:10px;
+}
+.tableBorder--thicker{
+	border-width:2px;
+	border-color: $gray-900;
+	border-style: solid;
+}
+.tableColor--white{
+	color:white;
+}
+.agregarMerch{
+	@include estiloFlex(flex,row,space-around,center);
+	transform: translateX(-10vw);
+	button{
+		transform: translateX(10px);
+	}
+}
+.agregarMerch:hover{
+	color:$violeta;
+	transition: $duracion ease-out;
+}

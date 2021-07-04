@@ -1,0 +1,327 @@
+/* Index */
+#contenidoIndex{
+	display: grid;
+	grid-template-columns: 200px 85vw;
+	grid-template-rows: 200px 45vh 25vh;
+	grid-template-areas: 
+	"logo imagenes"
+	"menu imagenes"
+	"menu imagenes"
+}
+.logoIndex{
+	grid-area: logo;
+}
+.principalIndex{
+	grid-area: menu;
+	width: 200px;
+	min-height: 30vh;
+	background-color: white;
+	.lista{
+		font-family: 'Cinzel', serif;
+		li{
+			margin-top: 40px;
+			margin-right: 3vw;
+		}
+	}
+	.RS{
+		padding-top:40px; 
+	}
+}
+#imagenesIndex{
+	grid-area: imagenes;
+	display: grid;
+	grid-template-rows: 200px 45vh 25vh;
+	grid-template-columns: 42.5vw 42.5vw;
+	grid-template-areas: 
+	"columna1 columna2 "
+	"columna1 columna2"
+	"fila2 fila2"
+}
+.columna1{
+	grid-area: columna1;
+	@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+	background-image: url(../imagenes/imagen1.jpg);
+	background-size: 42.5vw 80vh;
+}
+.columna1:hover{
+	background-size: 50vw 85vh;
+	transition: $duracion*6;
+}
+.columna2{
+	grid-area: columna2;
+	display: grid;
+	grid-template-columns: 42.5vw;
+	grid-template-rows: 200px 22.5vh 22.5vh;
+	
+	grid-template-areas: 
+	"imagen2"
+	"img4"
+	"img6" 
+}
+.imagen2{
+	grid-area: imagen2;
+	background-image: url(../imagenes/imagen2.jpg);
+	@include estiloImagenes(grid,no-repeat,cover,center,center,center);	
+	background-size: 45vw 45vh;
+}
+.imagen2:hover{
+	background-size: 50vw 50vh;
+	transition: $duracion*6;
+}
+.img4{
+	grid-area: img4;
+	background-image: url(../imagenes/img4.jpg);
+	@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+	background-size: 45vw 45vh;
+}
+.img4:hover{
+	background-size: 50vw 50vh;
+	transition: $duracion*6;
+}
+.img6{
+	grid-area: img6;
+	background-image: url(../imagenes/img6.jpg);
+	@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+	background-size: 45vw 45vh;
+}
+.img6:hover{
+	background-size: 50vw 50vh;
+	transition: $duracion*6;
+}
+.fila2{
+	grid-area: fila2;
+	display: grid;
+	grid-template-columns: 42.5vw 42.5vw;
+	grid-template-rows: 25vh;
+	grid-template-areas: 
+	"f2-c1 f2-c2"
+}
+.f2-c1{
+	grid-area: f2-c1;
+	background-image: url(../imagenes/f2-c1.jpg);
+	@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+	background-size: 100%;
+}
+.f2-c1:hover{
+	background-size: 120%;
+	transition: $duracion*6;
+}
+.f2-c2{
+	grid-area: f2-c2;
+	background-image: url(../imagenes/f2-c2.jpg);
+	@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+	background-size: 100%;
+}
+.f2-c2:hover{
+	background-size: 120%;
+	transition: $duracion*6;
+}
+.imagenesIndex__links{
+	color: #ffccff;
+}
+@media only screen and (min-width: 576px) and (max-width: 992px){
+	#contenidoIndex{
+		display: grid;
+		padding-left: 12px;
+		grid-template-columns: 200px 60vw;
+		grid-template-rows: 200px 50vh 25vh ;
+		grid-template-areas: 
+		"logo imagenes"
+		"menu imagenes"
+		"menu imagenes"
+	}
+	.principalIndex{
+		width: 200px;
+	}	
+	#imagenesIndex{
+	grid-area: imagenes;
+	display: grid;
+	grid-template-rows: 35vh 35vh 25vh;
+	grid-template-columns: 42.5vw 42.5vw;
+	grid-template-areas: 
+	"columna1 columna2 "
+	"fila2 columna2"
+	"fila2 columna2"
+	}
+	.columna1{
+	grid-area: columna1;
+	@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+	background-image: url(../imagenes/imagen1.jpg);
+	background-size: 42.5vw 40vh;
+	}
+	.columna1:hover{
+		background-size: 50vw 45vh;
+		transition: $duracion*6;
+	}
+	.columna2{
+		grid-area: columna2;
+		display: grid;
+		grid-template-columns: 42.5vw;
+		grid-template-rows: 35vh 35vh 30vh;
+		
+		grid-template-areas: 
+		"imagen2"
+		"img4"
+		"img6" 
+	}
+	.imagen2{
+		grid-area: imagen2;
+		background-image: url(../imagenes/imagen2.jpg);
+		@include estiloImagenes(grid,no-repeat,cover,center,center,center);	
+		background-size: 45vw 35vh;
+	}
+	.imagen2:hover{
+		background-size: 50vw 40vh;
+		transition: $duracion*6;
+	}
+	.img4{
+		grid-area: img4;
+		background-image: url(../imagenes/img4.jpg);
+		@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+		background-size: 45vw 35vh;
+	}
+	.img4:hover{
+		background-size: 50vw 40vh;
+		transition: $duracion*6;
+	}
+	.img6{
+		grid-area: img6;
+		background-image: url(../imagenes/img6.jpg);
+		@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+		background-size: 45vw 35vh;
+	}
+	.img6:hover{
+		background-size: 50vw 40vh;
+		transition: $duracion*6;
+	}
+	.fila2{
+		grid-area: fila2;
+		display: grid;
+		grid-template-columns: 42.5vw;
+		grid-template-rows: 35vh 30vh;
+		grid-template-areas: 
+		"f2-c1" 
+		"f2-c2"
+	}
+	.f2-c1{
+		grid-area: f2-c1;
+		background-image: url(../imagenes/f2-c1.jpg);
+		@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+		background-size: 45vw 35vh;
+	}
+	.f2-c1:hover{
+		background-size: 50vw 40vh;
+		transition: $duracion*6;
+	}
+	.f2-c2{
+		grid-area: f2-c2;
+		background-image: url(../imagenes/f2-c2.jpg);
+		@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+		background-size: 45vw 35vh;
+	}
+	.f2-c2:hover{
+		background-size: 50vw 40vh;
+		transition: $duracion*6;
+	}
+}
+@media only screen and (max-width: 576px){
+	#contenidoIndex{
+		display: grid;
+		padding-left: 12px;
+		grid-template-columns: 200px 80vw;
+		grid-template-rows: 30vh 150vh;
+		grid-template-areas: 
+		"logo imagenes"
+		"menu imagenes"
+	}
+	#imagenesIndex{
+		grid-area: imagenes;
+		display: grid;
+		grid-template-rows: 30vh 90vh 60vh ;
+		grid-template-columns: 60vw;
+		grid-template-areas: 
+		"columna1"
+		"columna2"
+		"fila2" 
+	}
+	.columna1{
+		grid-area: columna1;
+		@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+		background-image: url(../imagenes/imagen1.jpg);
+		background-size: 60vw 40vh;
+		}
+	.columna1:hover{
+		background-size: 70vw 45vh;
+		transition: $duracion*6;
+	}
+	.columna2{
+		grid-area: columna2;
+		display: grid;
+		grid-template-columns: 60vw;
+		grid-template-rows: 30vh 30vh 30vh;
+		
+		grid-template-areas: 
+		"imagen2"
+		"img4"
+		"img6" 
+	}
+	.imagen2{
+		grid-area: imagen2;
+		background-image: url(../imagenes/imagen2.jpg);
+		@include estiloImagenes(grid,no-repeat,cover,center,center,center);	
+		background-size: 60vw 35vh;
+	}
+	.imagen2:hover{
+		background-size: 70vw 40vh;
+		transition: $duracion*6;
+	}
+	.img4{
+		grid-area: img4;
+		background-image: url(../imagenes/img4.jpg);
+		@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+		background-size: 60vw 35vh;
+	}
+	.img4:hover{
+		background-size: 70vw 40vh;
+		transition: $duracion*6;
+	}
+	.img6{
+		grid-area: img6;
+		background-image: url(../imagenes/img6.jpg);
+		@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+		background-size: 60vw 35vh;
+	}
+	.img6:hover{
+		background-size: 70vw 40vh;
+		transition: $duracion*6;
+	}
+	.fila2{
+		grid-area: fila2;
+		display: grid;
+		grid-template-columns: 60vw;
+		grid-template-rows: 30vh 30vh;
+		grid-template-areas: 
+		"f2-c1" 
+		"f2-c2"
+	}
+	.f2-c1{
+		grid-area: f2-c1;
+		background-image: url(../imagenes/f2-c1.jpg);
+		@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+		background-size: 60vw 35vh;
+	}
+	.f2-c1:hover{
+		background-size: 70vw 40vh;
+		transition: $duracion*6;
+	}
+	.f2-c2{
+		grid-area: f2-c2;
+		background-image: url(../imagenes/f2-c2.jpg);
+		@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+		background-size: 60vw 35vh;
+	}
+	.f2-c2:hover{
+		background-size: 70vw 40vh;
+		transition: $duracion*6;
+	}
+}

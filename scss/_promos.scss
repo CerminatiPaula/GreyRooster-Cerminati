@@ -1,0 +1,7 @@
+.agregarPromo{
+	@include estiloFlex(flex,row,space-around,center);
+}
+.agregarPromo:hover{
+	color:$violeta;
+	transition: $duracion ease-out;
+}
