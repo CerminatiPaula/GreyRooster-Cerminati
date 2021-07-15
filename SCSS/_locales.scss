@@ -1,0 +1,42 @@
+/* Locales */
+.datosLocales{
+	grid-area: datos;	
+	display: grid;
+	grid-template-columns:40vw 40vw ;
+	grid-template-rows: 90vh;
+	grid-template-areas: 
+	"locales mapa"
+}
+.locales{
+	grid-area: locales;
+	padding:20px;
+	@include estiloFlex(flex,row,center,start)
+	h1{
+		color:white;
+		font-family: 'Lora', serif;
+	}
+}
+.mapa{
+	grid-area: mapa;
+	@include estiloFlex(flex,row,center,start)
+	padding: 20px;
+	iframe{
+		margin-top:30vh;
+	}
+}
+@media only screen and(max-width: 768px){
+	.datosLocales{
+		grid-area: datos;	
+		display: grid;
+		grid-template-columns:60vw ;
+		grid-template-rows: 420px 100vh;
+		grid-template-areas: 
+		"mapa"
+		"locales"
+	}
+	.mapa{
+		iframe{
+			margin-top: 0px;
+		}
+	}
+}

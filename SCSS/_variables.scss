@@ -1,0 +1,51 @@
+//colores
+$gray-100: #d9d9d9 !default;
+$gray-600: #6c757d !default;
+$gray-900: #212529 !default;
+$lighter: #6d767e !default;
+$darker: #22262a !default;
+$violeta: #ff44ff;
+$beige: #ffffdd;
+$rubia: #FAD724;
+$roja: #cc0000;
+$azul:#668cff;
+$azulClaro:#b3c6ff;
+
+$light:         $gray-600 !default;
+$dark:          $gray-900 !default;
+$lighter:	$lighter !default;
+$darker:	$darker !default;
+
+// mapas
+$table-variants: (
+  "light":      $light,
+  "dark":       $dark,
+  "lighter": $lighter,
+  "darker": $darker,  
+) !default;
+
+$colorCerveza: (
+	"rubia": $rubia,
+	"roja": $roja,
+	"negra": $beige,
+) !default;
+
+//mixins
+@mixin estiloImagenes($display,$bg-repeat,$bg-size,$bg-position,$align,$justify){
+	display: $display;
+	background-repeat: $bg-repeat;
+	background-size: $bg-size;
+	background-position: $bg-position;
+	align-items: $align;
+	justify-content: $justify;
+}
+@mixin estiloFlex($display,$f-direction,$justify,$align){
+	display:$display;
+	flex-direction: $f-direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+//transiciones
+$duracion: 0.3s;
+

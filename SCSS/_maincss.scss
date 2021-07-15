@@ -1,0 +1,57 @@
+/* Main */
+body{
+	background-image: url(../imagenes/fondoalt.jpg);
+}
+a{
+	text-decoration: none!important;
+}
+/* Estilo del Menu */
+.submenu{
+	display: none;
+	width:110px;
+	line-height: 1.5;
+}
+.lista{
+	li{
+		text-align: center;
+		border-top-left-radius: 30px 40px;
+		border-top-right-radius: 30px 40px;
+		border-bottom-left-radius: 30px 40px;
+		border-bottom-right-radius: 30px 40px;
+	}
+}
+.lista li:hover{
+	background-color: black;
+	border-top-left-radius: 30px 40px;
+	border-top-right-radius: 30px 40px;
+	border-bottom-left-radius: 30px 40px;
+	border-bottom-right-radius: 30px 40px;
+	transition: $duracion * 3.33;
+	h3{
+		color:white;
+		transition: $duracion * 3.33;
+	}
+	.submenu li{
+		color:white;
+	}
+}
+h3{
+	color: black;
+}
+li{
+	color:black;
+	list-style-position: outside;
+}
+/* Redes Sociales */
+.RS{
+	display:flex;
+	justify-content: center;
+	margin: 30px;	
+}
+.fa{
+	margin: 10px;
+	transform: scale(1.8);
+}
+.fa:hover{
+	color:black;
+}

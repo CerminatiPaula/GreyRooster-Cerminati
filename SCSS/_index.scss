@@ -1,0 +1,126 @@
+/* Index */
+#contenidoIndex{
+	display: grid;
+	grid-template-columns: 200px calc(100vw - 200px);
+	grid-template-rows: 200px calc(60vh - 100px) calc(40vh - 100px);
+	grid-template-areas: 
+	"logo imagenes"
+	"menu imagenes"
+	"menu imagenes"
+}
+.logoIndex{
+	grid-area: logo;
+}
+.principalIndex{
+	grid-area: menu;
+	width: 200px;
+	min-height: 30vh;
+	background-color: white;
+	.lista{
+		font-family: 'Cinzel', serif;
+		li{
+			margin-top: 40px;
+			margin-right: 3vw;
+		}
+	}
+	.RS{
+		padding-top:40px; 
+	}
+}
+#imagenesIndex{
+	grid-area: imagenes;
+	display: grid;
+	grid-template-rows: 25vh 25vh 25vh 25vh;
+	grid-template-columns: calc(50vw - 100px) calc(50vw - 100px);
+	grid-template-areas: 
+	"tienda locales"
+	"tienda contacto"
+	"cervezas nosotros"
+	"cervezas promos"
+}
+@each $clase in tienda, locales, contacto, cervezas, nosotros, promos{
+	.#{$clase}img {
+		grid-area: $clase;
+		@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+		background-image: url(../imagenes/#{$clase}img.jpg);
+		background-size: 42.5vw 80vh;
+	}
+	.#{$clase}img:hover{
+		background-size: 50vw 85vh;
+		transition: $duracion*6;
+	}
+}
+.imagenesIndex__links{
+	color: black;
+	font-family: 'Diplomata SC', cursive !important;
+	font-size:150%;
+	text-align: center;
+}
+@media only screen and (min-width: 576px) and (max-width: 992px){
+	#contenidoIndex{
+		display: grid;
+		padding-left: 12px;
+		grid-template-columns: 200px 60vw;
+		grid-template-rows: 200px 50vh 30vh ;
+		grid-template-areas: 
+		"logo imagenes"
+		"menu imagenes"
+		"menu imagenes"
+	}
+	.principalIndex{
+		width: 200px;
+	}	
+	#imagenesIndex{
+		grid-area: imagenes;
+		display: grid;
+		grid-template-rows: 35vh 35vh 30vh;
+		grid-template-columns: 42.5vw 42.5vw;
+		grid-template-areas: 
+		"tienda locales"
+		"cervezas contacto"
+		"promos nosotros"
+	}
+	@each $clase in tienda, locales, contacto, cervezas, nosotros, promos{
+		.#{$clase}img {
+			grid-area: $clase;
+			@include estiloImagenes(grid,no-repeat,cover,center,center,center);
+			background-image: url(../imagenes/#{$clase}img.jpg);
+			background-size: 45vw 35vh;
+		}
+		.#{$clase}img:hover{
+			background-size: 50vw 40vh;
+		}
+	}
+}
+@media only screen and (max-width: 576px){
+	#contenidoIndex{
+		display: grid;
+		padding-left: 12px;
+		grid-template-columns: 200px 80vw;
+		grid-template-rows: 30vh 150vh;
+		grid-template-areas: 
+		"logo imagenes"
+		"menu imagenes"
+	}
+	#imagenesIndex{
+		grid-area: imagenes;
+		display: grid;
+		grid-template-rows: 30vh 30vh 30vh 30vh 30vh 30vh  ;
+		grid-template-columns: 60vw;
+		grid-template-areas: 
+		"tienda"
+		"cervezas"
+		"locales"
+		"contacto"
+		"nosotros"
+		"promos" 
+	}
+	@each $clase in tienda, locales, contacto, cervezas, nosotros, promos{
+		.#{$clase}img {
+			background-size: 60vw 35vh;
+		}
+		.#{$clase}img:hover{
+			background-size: 70vw 40vh;
+		}
+	}
+}
