@@ -1,3 +1,4 @@
+import React from "react";
 const ItemListContainer = (props) => {
 	const {nombre, apellido,edad}=props
 	return(
