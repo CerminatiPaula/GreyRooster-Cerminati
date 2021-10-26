@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import App from "./components/App.js";
+import "./components/estilos.css";
 
-const Elemento = ()=> <h1>Hola mundo</h1>
 
-//
-ReactDOM.render(<Elemento/>, document.getElementById("root"))
+ReactDOM.render(<App/>, document.getElementById("root"))

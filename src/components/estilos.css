@@ -24,3 +24,33 @@ a{
 	text-decoration: none!important;
 	color: black;
 }
+#botonera {
+	display: flex;
+	flex-direction: column;
+	background-color: #eeeeee;
+	width: 20vw;
+}
+#botonera .modificarContador{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding:10%;
+}
+.modificarContador button{
+	padding: 5%;
+	width:15%;
+	height: 15%;
+	justify-content: center;
+}
+.contador{
+	padding: 5%;
+	width: 15%;
+	height: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.agregarCarrito{
+	display: flex;
+	justify-content: center;
+}
